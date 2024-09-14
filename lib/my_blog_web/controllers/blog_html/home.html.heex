@@ -1,7 +1,10 @@
-<div>
+<div class="text-sm grid grid-cols-[1fr_3fr] gap-y-1 gap-x-4">
+  <div class="text-xs text-gray-600">published</div>
+  <div class="text-xs text-gray-600">title</div>
   <%= for post <- @posts do %>
-    <p id="{post.id}">
-      <.link href={~p"/blog/#{post.id}"}><%= post.title %> - <time><%= post.date %></time></.link>
-    </p>
+    <div><time><%= post.date %></time></div>
+    <div>
+      <.link href={~p"/blog/#{post.id}"} ><%= post.title %></.link>
+    </div>
   <% end %>
 </div>

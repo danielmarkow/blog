@@ -4,10 +4,10 @@ defmodule MyBlogWeb.BlogController do
   alias MyBlog.Blog
 
   def index(conn, _params) do
-    render(conn, :home, layout: false, posts: Blog.all_posts())
+    render(conn, :home, posts: Blog.all_posts())
   end
 
   def show(conn, %{"id" => id}) do
-    render(conn, :show, layout: false, post: Blog.get_post_by_id!(id))
+    render(conn, :show, post: Blog.get_post_by_id!(id))
   end
 end

@@ -1,6 +1,14 @@
 <main>
+<header class="flex mb-5 md:mb-10 items-center">
+  <span class="text-md md:text-lg whitespace-nowrap font-bold">
+    <.link href={~p"/"} 
+      class="hover:bg-gray-200 active:bg-gray-300 p-2 rounded-sm -ml-2 transition-[background-color]" 
+    >Daniel Markow</.link>
+  </span>
+  <nav class="font-mono text-xs grow justify-end items-center flex gap-1 md:gap-3"></nav>
+</header>
   <.flash_group flash={@flash} />
-  <div class="flex justify-center items-center">
+  <div>
     <%= @inner_content %>
   </div>
 </main>

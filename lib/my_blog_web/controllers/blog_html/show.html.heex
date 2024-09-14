@@ -1,0 +1,9 @@
+<article class="prose">
+  <div class="h-6" />
+  <h1><%= @post.title %></h1>
+  <p class="text-sm">
+    <%= @post.author %> | <time><%= @post.date %></time>
+  </p>
+  <%= raw @post.body %>
+  <div class="h-6" />
+</article>
