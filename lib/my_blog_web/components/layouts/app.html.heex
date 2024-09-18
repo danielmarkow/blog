@@ -1,5 +1,5 @@
 <main>
-<header class="flex mb-5 md:mb-10 items-center">
+<header class="flex mb-5 md:mb-10 items-center md:p-0 p-1">
   <span class="text-md md:text-lg whitespace-nowrap font-bold">
     <.link href={~p"/"} 
       class="hover:bg-gray-200 active:bg-gray-300 p-2 rounded-sm -ml-2 transition-[background-color]" 
@@ -22,7 +22,7 @@
   </nav>
 </header>
   <.flash_group flash={@flash} />
-  <div>
+  <div class="md:p-0 p-1">
     <%= @inner_content %>
   </div>
 </main>
