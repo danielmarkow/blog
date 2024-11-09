@@ -31,7 +31,7 @@ This route is "classical" controller based instead of a live view since the sess
 
 ## Login flow in my own words
 
-The user enters login credentials in _/user/log_in_ live view defined in user_login_live.ex.
+The user enters login credentials in /user/log_in live view defined in user_login_live.ex.
 This live view does not have a handler. Which means the form content is posted to the endpoint defined in the action parameter /users/log_in.
 Which is also defined as a post controller based endpoint in the router which calls the user session controller which then proceeds to create a user session.
 
