@@ -46,7 +46,7 @@ If you are in a development environment and have no service configure visit /dev
 
 ## Reset password flow in my own words
 
-In the email generated in the forgot password flow the user is directed to _users/reset_password/<email_token>_.
+In the email generated in the forgot password flow the user is directed to users/reset_password/<email_token>.
 The reset password form can be found in user_reset_password_live.ex. The mount function retrieves the user using the email token.
 The "reset_password" event handler updates the password in the DB and then redirects to login.
 
