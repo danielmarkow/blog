@@ -17,7 +17,7 @@ Simply running the command
 mix phx.gen.auth Accounts User users
 ```
 
-sets everything up for you in your app for you to either use as is or to modify for your individual demands.
+sets everything up for you in your app to either use as is or to modify for your individual demands.
 If you want to modify it however you should understand it first.
 In the following I will go through all of the flows that phoenix auth brings and explain them in my own words because this helped me understand what is going on and it might help you as well.
 The text assumes you are working with live views.
