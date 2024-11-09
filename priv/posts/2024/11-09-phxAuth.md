@@ -24,15 +24,15 @@ The text assumes you are working with live views.
 
 ## Registration flow in my own words
 
-The user enters registration data in live view route _/users/register_. Upon hitting the "Create and Account" button the "save" handler in user*registration_live.ex is triggered.
-The user information is saved to the database. Then the form action trigger is set to true which posts the form data to the url */users/log*in?\_action=registered* which then proceeds to create
+The user enters registration data in live view route _/users/register_. Upon hitting the "Create and Account" button the "save" handler in user_registration_live.ex is triggered.
+The user information is saved to the database. Then the form action trigger is set to true which posts the form data to the url */users/log_in?\_action=registered* which then proceeds to create
 user session such that the user is immediately logged in after registering when the account details are found in the database.
 This route is "classical" controller based instead of a live view since the session cookie needs to be set in the header of the http request which is not possible in a live view since they are based on websockets.
 
 ## Login flow in my own words
 
 The user enters login credentials in _/user/log_in_ live view defined in user*login_live.ex.
-This live view does not have a handler. Which means the form content is posted to the endpoint defined in the action parameter */users/log*in*.
+This live view does not have a handler. Which means the form content is posted to the endpoint defined in the action parameter */users/log_in*.
 Which is also defined as a post controller based endpoint in the router which calls the user session controller which then proceeds to create a user session.
 
 ## Forgot password flow in my own words
@@ -42,7 +42,7 @@ The user enters his email address, upon confirmation the "send_email" handler is
 There the DB is checked if the user exists if so the reset instructions are delivered via mail in Accounts.deliver_user_reset_password_instructions/2 - where
 an encoded email token is generated as well as a user token. The user token is stored in the DB. Then the user notifier is triggered to send the user an email that
 contains a link with the generated email-token as a parameter. For this to work an email service has to be configured with Swoosh.
-If you are in a development environment and have no service configure visit /dev/mailbox to view the generated emails.
+If you are in a development environment and have no service configure visit */dev/mailbox* to view the generated emails.
 
 ## Reset password flow in my own words
 
